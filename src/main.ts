@@ -1,6 +1,2 @@
-import init, { run } from "minitrix"
-
-init().then(() => {
-	console.log("init wasm-pack")
-	run()
-})
+import { run } from "minitrix"
+await run()
