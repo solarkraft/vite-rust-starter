@@ -14,6 +14,9 @@ devDependencies:
   vite-plugin-wasm-pack:
     specifier: ^0.1.12
     version: 0.1.12
+  vite-wasm-pack-hmr:
+    specifier: ^1.0.5
+    version: 1.0.5
 
 packages:
 
@@ -305,6 +308,10 @@ packages:
       graceful-fs: 4.2.11
     dev: true
 
+  /lodash@4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: true
+
   /nanoid@3.3.6:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -365,6 +372,13 @@ packages:
       chalk: 4.1.2
       fs-extra: 10.1.0
       narrowing: 1.5.0
+    dev: true
+
+  /vite-wasm-pack-hmr@1.0.5:
+    resolution: {integrity: sha512-iZjX+XKziyv6IQQcz4sS3Q2HN2Fqk8J9ooi7Los3UJhsuNrVuc9MXlMAWgxfhDJatslh1QfKfNn0i4NMiQ9yAw==}
+    dependencies:
+      lodash: 4.17.21
+      picocolors: 1.0.0
     dev: true
 
   /vite@4.4.9:
