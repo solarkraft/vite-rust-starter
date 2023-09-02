@@ -1,6 +1,4 @@
 import { defineConfig } from "vite"
-
-import { wasmPackHmr } from "vite-wasm-pack-hmr"
 import wasm from "vite-plugin-wasm"
 
 export default defineConfig({
@@ -11,6 +9,7 @@ export default defineConfig({
 	// Disabling optimization doesn't seem to help, neither does re-optimization.
 	// A workaround for this issue is to trigger a Vite restart (for instance by touching a config file).
 	// I worked around the issue by using the output type "bundler" and importing the WASM as an ES Module.
-	// This also works with wasmPackHmr.
-	plugins: [wasm(), wasmPackHmr()],
+	// This also works with wasmPackHmr. When importing the module directly (import { run } from "../minitrix/pkg/minitrix")
+	// Everything works as intended; no extras needed!
+	plugins: [wasm()],
 })

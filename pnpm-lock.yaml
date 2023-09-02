@@ -23,9 +23,6 @@ devDependencies:
   vite-plugin-wasm-pack:
     specifier: ^0.1.12
     version: 0.1.12
-  vite-wasm-pack-hmr:
-    specifier: ^1.0.5
-    version: 1.0.5
 
 packages:
 
@@ -722,13 +719,6 @@ packages:
       vite: ^2 || ^3 || ^4
     dependencies:
       vite: 4.4.9
-    dev: true
-
-  /vite-wasm-pack-hmr@1.0.5:
-    resolution: {integrity: sha512-iZjX+XKziyv6IQQcz4sS3Q2HN2Fqk8J9ooi7Los3UJhsuNrVuc9MXlMAWgxfhDJatslh1QfKfNn0i4NMiQ9yAw==}
-    dependencies:
-      lodash: 4.17.21
-      picocolors: 1.0.0
     dev: true
 
   /vite@4.4.9:
