@@ -5,10 +5,10 @@
 	"type": "module",
 	"scripts": {
 		"dev": "concurrently \"pnpm run dev-web\" \"pnpm run dev-wasm\" ",
-		"dev-wasm": "nodemon --watch \"./minitrix/src/\" --ext rs --exec \"wasm-pack build --target bundler --dev minitrix\"",
+		"dev-wasm": "nodemon --watch \"./my-rust-module/src/\" --ext rs --exec \"wasm-pack build --target bundler --dev my-rust-module\"",
 		"dev-web": "vite",
 		"build": "pnpm run build-wasm && pnpm run build-web",
-		"build-wasm": "wasm-pack build --target bundler --dev minitrix",
+		"build-wasm": "wasm-pack build --target bundler my-rust-module",
 		"build-web": "tsc && vite build",
 		"preview": "vite preview"
 	},
