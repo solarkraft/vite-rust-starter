@@ -1,4 +1,4 @@
 import "./style.css"
 
-import { run } from "../minitrix/pkg/minitrix"
-await run()
+import { run } from "../my-rust-module/pkg/my_rust_module"
+run()
