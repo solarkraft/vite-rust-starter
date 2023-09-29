@@ -10,7 +10,6 @@
 		"build": "pnpm run build-wasm && pnpm run build-web",
 		"build-wasm": "wasm-pack build --target bundler --dev minitrix",
 		"build-web": "tsc && vite build",
-		"p": "vite preview",
 		"preview": "vite preview"
 	},
 	"devDependencies": {
