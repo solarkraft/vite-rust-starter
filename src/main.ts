@@ -1,8 +1,11 @@
 import "./style.css"
 
-// We don't need to initialize the module because it's loaded as an ES module.
-// Browsers can't directly handle this yet, but vite-plugin-wasm can do the transformation for us.
-import { hello_console, hello_alert } from "../my-rust-module/pkg/my_rust_module"
-hello_console()
+// Usually you would directly import functions like import { hello_console } from ...
+// In this case we are doing a little trick to import into the global scope so that
+// all Rust functions are directly available in the browser console.
+// We don't need to initialize the module because it's imported as an ES module.
+// Browsers can't directly handle this yet, but vite-plugin-wasm transforms it for us.
+import * as rustModule from "../my-rust-module/pkg/my_rust_module"
+Object.assign(globalThis, rustModule)
 
-document.getElementById("alertButton")!.addEventListener("click", () => hello_alert())
+rustModule.hello_console()
