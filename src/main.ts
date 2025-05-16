@@ -23,4 +23,4 @@ import { hello_console, hello_alert } from "../my-rust-module/pkg/my_rust_module
 hello_console()
 
 import { appendButton } from "./util"
-appendButton("Call Rust function", hello_alert)
+appendButton("RustModule.hello_alert()", hello_alert)

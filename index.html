@@ -9,7 +9,19 @@
 	</head>
 	<body>
 		<main>
-			<h1>Hello from Vite</h1>
+			<h1>Vite Rust Starter</h1>
+			<p>
+				This template is meant to serve as a starting point for and demonstration of interoperating between
+				JavaScript and WASM in a way in which the web side retains most of the control.
+			</p>
+			<p>
+				The rust module is exposed to the global namespace under the <code>RustModule</code> object. You can
+				explore its functions by pressing <code>.</code> after its name in the browser console.
+			</p>
+			<p>
+				Try calling <code>RustModule.hello_alert()</code>: You just called a Rust function from JavaScript and
+				that Rust function called a browser function as imported from <code>gloo::dialogs</code>!
+			</p>
 		</main>
 	</body>
 </html>
