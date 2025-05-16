@@ -6,11 +6,21 @@ import "./style.css"
 // We don't need to initialize the module because it's imported as an ES module.
 // Browsers can't directly handle this yet, but vite-plugin-wasm transforms it for us.
 
-import * as rustModule from "../my-rust-module/pkg/my_rust_module"
-Object.assign(globalThis, rustModule)
+// We add the entire rust module to the global scope for convenient introspection
+import * as RustModule from "../my-rust-module/pkg/my_rust_module"
+declare global {
+	interface Window {
+		RustModule: typeof RustModule
+	}
+}
+window.RustModule = RustModule
 
-rustModule.hello_console()
+// ... but we can import Rust functions just like JS ones
+
+import { hello_console, hello_alert } from "../my-rust-module/pkg/my_rust_module"
+
+// Greet curious developer right away
+hello_console()
 
 import { appendButton } from "./util"
-
-appendButton("Test Rust", rustModule.hello_alert)
+appendButton("Call Rust function", hello_alert)
