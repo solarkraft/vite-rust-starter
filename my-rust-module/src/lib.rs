@@ -1,5 +1,5 @@
-use gloo::console::log;
 use gloo::dialogs::alert;
+use gloo_console::log;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
